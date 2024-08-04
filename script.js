@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
     let projects = [
-        { name: "Projekt 1", description: "En kort beskrivning av Projekt 1.", image:"assets/image1.png", caption: "En bild av Projekt 1", gitHubLink: "https://github.com/username/project1" },
-        { name: "Projekt 2", description: "En kort beskrivning av Projekt 2.", image:"assets/image2.png", caption: "En bild av Projekt 2", gitHubLink: "https://github.com/username/project2" },
-        { name: "Projekt 3", description: "En kort beskrivning av Projekt 3.", image:"assets/image3.png", caption: "En bild av Projekt 3", gitHubLink: "https://github.com/username/project3" },
+        { name: "Tic-tac-toe", description: "Ett tre-i-rad för två personer", image:"assets/image1.png", caption: "En bild av Projekt 1", gitHubLink: "https://annkar73.github.io/tic-tac-toe/" },
+        { name: "Memory", description: "Ett memoryspel av enklare slag.", image:"assets/image2.png", caption: "En bild av Projekt 2", gitHubLink: "https://annkar73.github.io/memory-game/" },
+        { name: "kalender med klocka", description: "En enkel kalender med klocka", image:"assets/image3.png", caption: "En bild av Projekt 3", gitHubLink: "https://annkar73.github.io/calendar/" },
+        { name: "Lottogenerator", description: "En slumpgenerator för olika sifferspel, bland annat Lotto.", image:"assets/image1.png", caption: "En bild av Projekt 4", gitHubLink: "https://annkar73.github.io/lotto-generator/" },
+        { name: "Konversationstartare", description: "En slumpgenerator för olika samtalsämnen.", image:"assets/image1.png", caption: "En bild av Projekt 5", gitHubLink: "https://annkar73.github.io/vue-conversation-starters/" },
+
+
 
         // Lägg till fler projekt här
     ];
@@ -39,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
         projectDescription.textContent = project.description;
 
         let githubLink = document.createElement("button");
-        githubLink.textContent = "Se repo på gitHub";
+        githubLink.textContent = "Se live";
         githubLink.classList.add("github-button");            
         githubLink.dataset.projectIndex = index;
         githubLink.addEventListener("click", goToGitHub);
