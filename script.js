@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     let projects = [
-        { name: "Tic-tac-toe", description: "Ett tre-i-rad för två personer", image:"assets/image1.png", caption: "En bild av Projekt 1", gitHubLink: "https://annkar73.github.io/tic-tac-toe/" },
-        { name: "Memory", description: "Ett memoryspel av enklare slag.", image:"assets/image2.png", caption: "En bild av Projekt 2", gitHubLink: "https://annkar73.github.io/memory-game/" },
-        { name: "Kalender med klocka", description: "En enkel kalender med klocka", image:"assets/image3.png", caption: "En bild av Projekt 3", gitHubLink: "https://annkar73.github.io/calendar/" },
-        { name: "Lottogenerator", description: "En slumpgenerator för olika sifferspel, bland annat Lotto.", image:"assets/image1.png", caption: "En bild av Projekt 4", gitHubLink: "https://annkar73.github.io/lotto-generator/" },
-        { name: "Konversationstartare", description: "En slumpgenerator för olika samtalsämnen.", image:"assets/image1.png", caption: "En bild av Projekt 5", gitHubLink: "https://annkar73.github.io/vue-conversation-starters/" },
+        { name: "Tic-tac-toe", description: "Ett tre-i-rad för två personer", image:"assets/image1.png", caption: "Tic-Tac-Toe", gitHubLink: "https://annkar73.github.io/tic-tac-toe/" },
+        { name: "Memory", description: "Ett memoryspel av enklare slag.", image:"assets/image2.png", caption: "Memory", gitHubLink: "https://annkar73.github.io/memory-game/" },
+        { name: "Kalender med klocka", description: "En enkel kalender med klocka", image:"assets/image3.png", caption: "Kalender med klocka", gitHubLink: "https://annkar73.github.io/calendar/" },
+        { name: "Lottogenerator", description: "En slumpgenerator för olika sifferspel, bland annat Lotto.", image:"assets/image1.png", caption: "Lottogenerator", gitHubLink: "https://annkar73.github.io/lotto-generator/" },
+        { name: "Konversationstartare", description: "En slumpgenerator för olika samtalsämnen.", image:"assets/image1.png", caption: "Konversationsstartare", gitHubLink: "https://annkar73.github.io/vue-conversation-starters/" },
 
 
 
