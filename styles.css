@@ -261,7 +261,7 @@ ul.coursesList li:before {
 }
 
 #contact {
-    background-color: #cbb89d;
+    background-color: #ede1d2;
     color: black;
 }
 
@@ -275,7 +275,7 @@ ul.coursesList li:before {
 
 footer {
     text-align: center;
-    background-color: #ede1d2;
+    background-color: #cbb890;
     color: black;
     padding: 10px 0;
 }
