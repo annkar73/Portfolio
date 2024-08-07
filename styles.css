@@ -27,7 +27,8 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     height: 50px;
     width: 100%;
-    background-color: #1f859d;
+    background-color: #cbb89d;
+    color: black;
     z-index: 1000;
 }
 
@@ -38,7 +39,7 @@ header {
     background-image: url('assets/mosaic.jpg'); 
     background-size: cover;
     background-position: center;
-    color: #f2f2f2;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +54,7 @@ header {
     width: 100vw;
     height: auto;
     padding: 20px;
-    background-color: rgba(13, 59, 79, 0.8);
+    background-color: #412f26;
     color: #f2f2f2;
     text-align: center;
 }
@@ -81,6 +82,7 @@ nav {
 nav ul {
     list-style-type: none;
     padding: 0;
+    color: black;
 }
 
 nav ul li {
@@ -90,7 +92,7 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: #f2f2f2;
+    color: black;
 }
 
 nav a:hover {
@@ -113,8 +115,8 @@ h2 {
 #about {
     background-size: cover;
     background-position: center;
-    background-color: rgba(31, 133, 157, 0.5);
-    color: #0d3b4f;
+    background-color: #ede1d2;
+    color: black;
     padding: 0;
     display: flex;
     flex-direction: column; 
@@ -126,11 +128,11 @@ h2 {
     flex: 1;
     padding: 15px 20px 15px 20px;
     max-width: 600px;
-    color: #0d3b4f;
+    color: #412f26;
 }
 
 .content h2 {
-    color: #0d3b4f;
+    color: #412f26;
 }
 
 .aboutArticle {
@@ -145,8 +147,8 @@ h2 {
 .about-sidebar {
     display: flex;
     flex-direction: column;
-    background-color: #1f859d;
-    color: #f2f2f2;
+    background-color: #cbb89d;
+    color: black;
     padding: 15px 15px 15px 25px;
     height: 100%;
 }
@@ -154,6 +156,7 @@ h2 {
 .about-sidebar h2 {
     margin-top: 0;
     margin-bottom: 10px;
+    color: #412f26;
 }
 
 .coursesList {
@@ -166,21 +169,21 @@ h2 {
 
 ul.coursesList li:before {
     content: "\2605";
-    color: goldenrod;
+    color: #412f26;
     font-weight: 900;
     margin-right: 10px;
     text-shadow: 0 0 10px rgba(255, 255, 200, 0.5);
 }
 .highlighted-text {
-    background-color: #0d3b4f;
-    color: goldenrod;
+    background-color: #ede1d2;
+    color: #cb3701;
     padding: 2px 7px 2px 5px;
-    border: goldenrod ridge 2px;
+    border: #cb3701 ridge 2px;
 
 }
 
 #projects {
-    background-color: #0d3b4f;
+    background-color: #412f26;
     color: #f2f2f2;
 }
 
@@ -195,7 +198,7 @@ ul.coursesList li:before {
     display: flex;
     flex-direction: column;
     background-color: #f2f2f2;
-    color: #0d3b4f;
+    color: black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 20px;
@@ -236,7 +239,7 @@ ul.coursesList li:before {
 }
 
 .project-item button {
-    background-color: #8B0000;
+    background-color: #cb3701;
     color: #f2f2f2;
     font-weight: bold;
     border-radius: 5px;
@@ -248,8 +251,8 @@ ul.coursesList li:before {
 }
 .project-item button:hover {
     background-color: #f2f2f2;
-    color: #8B0000;
-    border: 1px solid #8B0000;
+    color: #cb3701;
+    border: 1px solid #cb3701;
 
 }
 
@@ -258,18 +261,22 @@ ul.coursesList li:before {
 }
 
 #contact {
-    background-color: rgba(31, 133, 157, 0.5);
-    color: #0d3b4f;
+    background-color: #cbb89d;
+    color: black;
 }
 
 #contact h2 {
-    color: #0d3b4f;
+    color: #412f26;
+}
+
+#contact a {
+    color: #412f26;
 }
 
 footer {
     text-align: center;
-    background-color: #1f859d;
-    color: #fff;
+    background-color: #ede1d2;
+    color: black;
     padding: 10px 0;
 }
 
