@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Projects } from './pages/Projects';
 
 const Container = styled.div`
   padding: 20px;
@@ -10,7 +11,8 @@ const App = () => {
   return (
     <Container>
       <h1>My Portfolio</h1>
-      {/* Lägg till dina komponenter här */}
+      <Projects />
+      
     </Container>
   );
 };
