@@ -1,8 +1,6 @@
-// src/components/Projects.tsx
 import styled from "styled-components";
-import { colors } from "../helpers/variables";
+import { colors, breakpoints } from "../helpers/variables";
 
-// Typ för projektinformationen
 type Project = {
     name: string;
     description: string;
@@ -11,53 +9,74 @@ type Project = {
     gitHubLink: string;
 };
 
-// Din lista över projekt
 const projects: Project[] = [
-    { name: "Tic-tac-toe", description: "Ett tre-i-rad för två personer", image:"assets/tictactoe.png", caption: "Tic-Tac-Toe", gitHubLink: "https://annkar73.github.io/tic-tac-toe/" },
-    { name: "Memory", description: "Ett memoryspel av enklare slag.", image:"assets/memory.png", caption: "Memory", gitHubLink: "https://annkar73.github.io/memory-game/" },
-    { name: "Kalender med klocka", description: "En enkel kalender med klocka", image:"assets/clock.png", caption: "Kalender med klocka", gitHubLink: "https://annkar73.github.io/calendar/" },
-    { name: "Lottogenerator", description: "En slumpgenerator för olika sifferspel, bland annat Lotto.", image:"assets/lotto.png", caption: "Lottogenerator", gitHubLink: "https://annkar73.github.io/lotto-generator/" },
-    { name: "Konversationstartare", description: "En slumpgenerator för olika samtalsämnen.", image:"assets/snackis.png", caption: "Konversationsstartare", gitHubLink: "https://annkar73.github.io/vue-conversation-starters/" },
+    { name: "Tic-tac-toe", description: "Ett tre-i-rad för två personer", image: "assets/tictactoe.png", caption: "Tic-Tac-Toe", gitHubLink: "https://annkar73.github.io/tic-tac-toe/" },
+    { name: "Memory", description: "Ett memoryspel av enklare slag.", image: "assets/memory.png", caption: "Memory", gitHubLink: "https://annkar73.github.io/memory-game/" },
+    { name: "Kalender med klocka", description: "En enkel kalender med klocka", image: "assets/clock.png", caption: "Kalender med klocka", gitHubLink: "https://annkar73.github.io/calendar/" },
+    { name: "Lottogenerator", description: "En slumpgenerator för olika sifferspel, bland annat Lotto.", image: "assets/lotto.png", caption: "Lottogenerator", gitHubLink: "https://annkar73.github.io/lotto-generator/" },
+    { name: "Konversationstartare", description: "En slumpgenerator för olika samtalsämnen.", image: "assets/snackis.png", caption: "Konversationsstartare", gitHubLink: "https://annkar73.github.io/vue-conversation-starters/" },
 ];
 
-// Styled Components
-const ProjectList = styled.div`
+const PageWrapper = styled.section`
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    padding: 25px;
+    background-color: transparent;
 `;
 
-const ProjectItem = styled.div`
-    width: 300px;
-    background: #f0f0f0;
+const ProjectList = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 90vw;
+
+    @media (min-width: ${breakpoints.tablet}) {
+        width: 65vw;
+    }
+`;
+
+const ProjectItem = styled.div<{ alternate: boolean }>`
+    display: flex;
+    flex-direction: column;
+    background: ${colors.lightgrey};
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    width: 100%;
+    max-height: 500px;
+
+    @media (min-width: ${breakpoints.tablet}) {
+        flex-direction: ${(props) => (props.alternate ? "row-reverse" : "row")};
+        height: 250px;
+    }
 `;
 
-const ProjectFigure = styled.figure`
-    margin: 0;
-    position: relative;
+const ImageContainer = styled.div`
+    flex: 1;
+    padding: 8px; // Ger padding runt bilden
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 `;
 
 const ProjectImage = styled.img`
     width: 100%;
-    height: auto;
-`;
-
-const ImageCaption = styled.figcaption`
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 5px 10px;
-    border-radius: 4px;
+    height: 100%;
+    object-fit: cover; // Bilden blir beskuren för att passa in i containern
+    border-radius: 8px; // Rundade hörn
 `;
 
 const ProjectContent = styled.div`
+    flex: 2;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `;
 
 const ProjectTitle = styled.h3`
@@ -75,35 +94,36 @@ const GitHubButton = styled.button`
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    align-self: start;
 
     &:hover {
         background: darkorange;
     }
 `;
 
-// Själva Projects-komponenten
 export const Projects = () => {
     const goToGitHub = (link: string) => {
         window.open(link, "_blank");
     };
 
     return (
-        <ProjectList>
-            {projects.map((project, index) => (
-                <ProjectItem key={index}>
-                    <ProjectFigure>
-                        <ProjectImage src={project.image} alt={project.name} />
-                        <ImageCaption>{project.caption}</ImageCaption>
-                    </ProjectFigure>
-                    <ProjectContent>
-                        <ProjectTitle>{project.name}</ProjectTitle>
-                        <ProjectDescription>{project.description}</ProjectDescription>
-                        <GitHubButton onClick={() => goToGitHub(project.gitHubLink)}>
-                            Se live
-                        </GitHubButton>
-                    </ProjectContent>
-                </ProjectItem>
-            ))}
-        </ProjectList>
+        <PageWrapper>
+            <ProjectList>
+                {projects.map((project, index) => (
+                    <ProjectItem key={index} alternate={index % 2 === 1}>
+                        <ImageContainer>
+                            <ProjectImage src={project.image} alt={project.name} />
+                        </ImageContainer>
+                        <ProjectContent>
+                            <ProjectTitle>{project.name}</ProjectTitle>
+                            <ProjectDescription>{project.description}</ProjectDescription>
+                            <GitHubButton onClick={() => goToGitHub(project.gitHubLink)}>
+                                Se live
+                            </GitHubButton>
+                        </ProjectContent>
+                    </ProjectItem>
+                ))}
+            </ProjectList>
+        </PageWrapper>
     );
 };

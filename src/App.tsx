@@ -1,7 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Projects } from './pages/Projects';
 import { Header } from './components/Header';
+import './main.css';
 
 const Container = styled.div`
   padding: 20px;

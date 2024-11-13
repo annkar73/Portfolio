@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', sans-serif; /* Eller vilken font du än använder */
+    background: linear-gradient(to bottom, #ffe998, #57370d); /* Bakgrundsfärg på hela sidan */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}

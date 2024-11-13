@@ -2,6 +2,13 @@
 export const colors = {
     dark: "#1c223a",
     white: "#fffafa",
-    secondary: "#e5d4b6",
+    beige: "#e5d4b6",
+    lightgrey: '#f0f0f0',
     accent: "#f44e1c"
 };
+
+export const breakpoints = {
+    tablet: "768px",
+    desktop: "1024px"
+};
+
