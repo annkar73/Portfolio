@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Projects } from './pages/Projects';
+import { Header } from './components/Header';
 
 const Container = styled.div`
   padding: 20px;
@@ -10,6 +11,7 @@ const Container = styled.div`
 const App = () => {
   return (
     <Container>
+        <Header />
       <h1>My Portfolio</h1>
       <Projects />
       
