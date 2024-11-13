@@ -1,5 +1,6 @@
 // src/components/Projects.tsx
 import styled from "styled-components";
+import { colors } from "../helpers/variables";
 
 // Typ för projektinformationen
 type Project = {
@@ -69,14 +70,14 @@ const ProjectDescription = styled.p`
 
 const GitHubButton = styled.button`
     padding: 10px 20px;
-    background: #0073e6;
+    background: ${colors.accent};
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 
     &:hover {
-        background: #005bb5;
+        background: darkorange;
     }
 `;
 

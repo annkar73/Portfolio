@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { colors } from "../helpers/variables";
+import { Button } from "./Button";
 
 const HeaderContainer = styled.div`
     background-color: ${colors.dark};
@@ -8,6 +9,7 @@ const HeaderContainer = styled.div`
     top: 0;
     left: 0;
     width: 100vw;
+    margin-bottom: 50px;
 `;
 
 export const Header = () => {
@@ -16,6 +18,7 @@ export const Header = () => {
           <HeaderContainer>
   <h1>Anna Karlsen</h1>
   <h2>Portfolio</h2>
+  <Button>Testknapp</Button>
 </HeaderContainer>
 
         </>
