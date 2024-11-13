@@ -1,14 +1,20 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Verdana', sans-serif; 
-    background: linear-gradient(to bottom, #ffe998, #57370d); 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  font-family: "Verdana", sans-serif;
+  background: linear-gradient(to bottom, #ffe998, #57370d);
+  background-size: cover; /* Ser till att bakgrunden täcker hela fönstret */
+  background-attachment: fixed; /* Håller bakgrunden på plats när användaren scrollar */
+  background-position: center; /* Centrera bakgrunden */
+  min-height: 100vh; /* Täcker hela höjden av skärmen */
+  margin: 0; /* Ta bort standardmarginaler för body */
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
