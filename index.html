@@ -1,108 +1,20 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-      charset="utf-8"
-    />
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anna Karlsen | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <!-- Load external CSS styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS styles from Vite's output will be automatically included here -->
   </head>
-
   <body>
-    <div id="stickyNav">
-      <nav>
-          <ul>
-            <li><a href="#about">Om mig</a></li>
-            <li><a href="#projects">Projekt</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-          </ul>
-        </nav>
-      </div>
-
-    <header>
-        <div id="headerContent">
-        <h1>Anna Karlsen</h1>
-        <h2>Portfolio</h2>
-      </div>
-        
-    </header>
-
-
-
-    <section id="about" class="background">
-      <div class="content">
-        <h2>Om mig</h2>
-        <div class="aboutArticle">
-          Efter ett mycket varierande arbetsliv som har gett mig många erfarenheter genom åren har jag nu slutligen bestämt mig för att vidareutveckla ett intresse jag har haft länge, men aldrig riktigt tagit tag i tidigare - 
-          jag går sedan oktober 2024 Medieinstitutets 2-åriga YH-utbildning inom Front End Development.
-        </div>
-        <div class="aboutInfo">
-          Utbildningen är designad för att ge oss bred kunskap och praktiska färdigheter som krävs för att bygga moderna, responsiva och användarvänliga webbapplikationer och omfattar flera viktiga ämnesområden och kurser som ger en holistisk förståelse för front end-utveckling.
-
-        </div>
-        <div class="aboutInfo">
-          Inom varje kursmoment ingår arbete både enskilt och i grupp för att vi på detta vis ska få erfarenhet av att samarbeta på olika sätt i projekt av varierande storlek och med olika sammansättningar.
-        </div>
-        <div class="aboutInfo">
-          Utbildningen är mycket omfattande och ger mig och mina klasskamrater en solid grund inom front end-utveckling. Genom att kombinera teoretisk undervisning med praktiska projekt har vi fått de färdigheter som behövs för att lyckas i en karriär som Front End Developer. 
-          <p>
-            <strong>
-          Jag ser fram emot att fortsätta utvecklas och använda mina kunskaper för att skapa innovativa och användarvänliga webbapplikationer.
-        </strong>
-          </p>
-        </div>
-      </div>
-      <div class="about-sidebar">
-        <h2>Kurser som ingår</h2>
-        <ul class="coursesList">
-            <li>HTML</li>
-            <li>CSS och SCSS</li>
-            <li>Grundkurs JavaScript</li>
-            <li>Agila metoder</li>
-            <li>API-utveckling</li>
-            <li>Arbetsmetodik</li>
-            <li>Grafisk design</li>
-            <li>UX/UI</li>
-            <li>Testning </li>
-            <li>Avancerad JavaScript <em class="highlighted-text">&#8592; här är vi nu</em></li>
-            <li>Lärande i Arbete (LIA) 1 - Praktikperiod</li>
-            <li>Examensarbete</li>
-            <li>Lärande i Arbete (LIA) 2 - Praktikperiod</li>
-
-        </ul>
-
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Projekt</h2>
-      <div id="project-list">
-        <!-- Här läggs dynamiskt till projekt med JavaScript -->
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Kontakt</h2>
-      <p>
-        Kontakta mig via e-post:
-        <a href="mailto:karlsen1973@outlook.com">karlsen1973@outlook.com</a>
-      </p>
-      <p>Se mer på <a href="https://www.linkedin.com/in/annakarlsen/">LinkedIn</a> och <a href="https://github.com/annkar73">GitHub</a>.</p>
-    </section>
-
-    <footer>
-      <p>&copy; 2024 Anna Karlsen</p>
-    </footer>
-
-    <!-- Load external JavaScript -->
-    <script src="script.js"></script>
+    <div id="root"></div>
+    <!-- Vite will automatically inject the correct script here -->
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
