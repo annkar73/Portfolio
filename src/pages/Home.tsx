@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <div>
       <HeroSection>
-        <Title>Välkommen till min Portfolio</Title>
+        <Title>Anna Karlsen</Title>
       </HeroSection>
       {/* Här kan du lägga till mer innehåll för sidan */}
     </div>
