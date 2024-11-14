@@ -47,15 +47,17 @@ export const PageWrapper = styled.section`
 export const AboutWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: ${colors.beige};
+  background-color: rgb(255, 255, 255, 0.1);
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7);
   border-radius: 16px;
-  margin: 20px 0;
   width: 90%;
   height: auto;
-  align-self: center;
-  padding: 25px;
+  //align-self: center;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  margin: auto;
   box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 
   @media (min-width: ${breakpoints.tablet}) {
     flex-direction: row;
@@ -67,8 +69,8 @@ export const TextWrapper = styled.div`
   flex-direction: column;
   background-color: ${colors.beige};
   border-radius: 16px;
-  margin: 50px 0 0 0;
-  width: 100%;
+  margin: 0;
+  width: 90%;
   height: auto;
   justify-content: center;
   align-items: center;

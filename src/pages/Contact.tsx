@@ -1,5 +1,5 @@
 
-import { PageWrapper, StyledH1, TextWrapper, StyledBlock, StyledImg, StrongP, StyledLink, ContactList } from "../components/styled/StyledComponents";
+import { PageWrapper, StyledH1, StyledBlock, StyledImg, StrongP, StyledLink, ContactList, AboutWrapper, TextWrapper } from "../components/styled/StyledComponents";
 
 
 export const Contact = () => {
@@ -8,7 +8,8 @@ export const Contact = () => {
       <PageWrapper>
       <StyledH1>Kontakt</StyledH1>
 
-        <TextWrapper>
+        <AboutWrapper>
+          <TextWrapper>
           <StyledBlock>
             <StyledImg src="./assets/anna2.jpg"></StyledImg>
           </StyledBlock>
@@ -28,7 +29,8 @@ export const Contact = () => {
               </li>
             </ContactList>
           </StyledBlock>
-        </TextWrapper>
+          </TextWrapper>
+        </AboutWrapper>
       </PageWrapper>
     </>
   );
