@@ -50,17 +50,18 @@ export const AboutWrapper = styled.div`
   background-color: rgb(255, 255, 255, 0.1);
   box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7);
   border-radius: 16px;
-  width: 90%;
+  width: 100%;
   height: auto;
   //align-self: center;
   align-items: center;
   justify-content: center;
-  padding: 15px;
-  margin: auto;
+  padding: 10px;
+  margin: 20px auto;
   box-sizing: border-box;
 
   @media (min-width: ${breakpoints.tablet}) {
     flex-direction: row;
+    width: 50%;
   }
 `;
 
@@ -69,17 +70,19 @@ export const TextWrapper = styled.div`
   flex-direction: column;
   background-color: ${colors.beige};
   border-radius: 16px;
-  margin: 0;
-  width: 90%;
+  margin: 10px;
+  width: 100%;
   height: auto;
   justify-content: center;
   align-items: center;
-  padding: 15px; 
+  padding: 20px; 
   box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
+ 
 
   @media (min-width: ${breakpoints.tablet}) {
-    width: 80%;
+    width: 100%;
     align-self: center;
   }
 `;
