@@ -13,3 +13,10 @@ export const breakpoints = {
     desktop: "1024px"
 };
 
+export const fontSizes = {
+    small: "12px",
+    basic: "14px",
+    large: "16px",
+    xLarge: "20px",
+    xxLarge: "24px"
+}

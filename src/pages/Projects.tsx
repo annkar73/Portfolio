@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, breakpoints } from "../helpers/variables";
+import { colors, breakpoints, fontSizes } from "../helpers/variables";
 
 type Project = {
     name: string;
@@ -41,7 +41,7 @@ const ProjectList = styled.div`
 const ProjectItem = styled.div<{ alternate: boolean }>`
     display: flex;
     flex-direction: column;
-    background: ${colors.lightgrey};
+    background: ${colors.beige};
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     overflow: hidden;
@@ -93,11 +93,16 @@ const ProjectDescription = styled.p`
 const GitHubButton = styled.button`
     padding: 10px 20px;
     background: ${colors.accent};
-    color: white;
+    color: ${colors.dark};
+    font-weight: bold;
+    font-size: ${fontSizes.basic};
+    text-transform: uppercase;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     align-self: start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+
 
     &:hover {
         background: darkorange;

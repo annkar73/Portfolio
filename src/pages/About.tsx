@@ -1,10 +1,48 @@
+import { styled } from "styled-components";
+import { colors, fontSizes } from "../helpers/variables";
+
+const PageWrapper = styled.section`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    background-color: transparent;
+`;
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: ${colors.beige};
+  border-radius: 16px;
+  margin: 50px 0 25px 0;
+  width: 100%;
+  height: auto;
+  padding: 25px; 
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+`;
+const StyledH2 = styled.h2`
+  color: ${colors.dark};
+  font-size: ${fontSizes.xxLarge};
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+`;
+
+
+const StyledList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+`;
+
 
 export const About = () => {
     return (
         <>
-        <section id="about" className="background">
-<div className="content">
-  <h2>Om mig</h2>
+        <PageWrapper>
+<TextWrapper>
+  <StyledH2>Om mig</StyledH2>
   <div className="aboutArticle">
     Efter ett mycket varierande arbetsliv som har gett mig många erfarenheter genom åren har jag nu slutligen bestämt mig för att vidareutveckla ett intresse jag har haft länge, men aldrig riktigt tagit tag i tidigare - 
     jag går sedan oktober 2024 Medieinstitutets 2-åriga YH-utbildning inom Front End Development.
@@ -24,10 +62,10 @@ export const About = () => {
   </strong>
     </p>
   </div>
-</div>
-<div className="about-sidebar">
-  <h2>Kurser som ingår</h2>
-  <ul className="coursesList">
+</TextWrapper>
+<TextWrapper>
+  <StyledH2>Kurser som ingår</StyledH2>
+  <StyledList>
       <li>HTML</li>
       <li>CSS och SCSS</li>
       <li>Grundkurs JavaScript</li>
@@ -42,10 +80,10 @@ export const About = () => {
       <li>Examensarbete</li>
       <li>Lärande i Arbete (LIA) 2 - Praktikperiod</li>
 
-  </ul>
+  </StyledList>
 
-</div>
-</section>
+</TextWrapper>
+</PageWrapper>
 
         
         </>
