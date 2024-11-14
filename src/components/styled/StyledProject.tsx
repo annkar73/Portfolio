@@ -1,40 +1,52 @@
 import { styled } from "styled-components";
 import { breakpoints, colors, fontSizes } from "../../helpers/variables";
 
+// Wrapper för hela sidan
 export const PageWrapper = styled.section`
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 25px;
     background-color: transparent;
 `;
 
+// Container för projektlistan
 export const ProjectList = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    width: 90vw;
+    background-color: rgb(255, 255, 255, 0.1);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    gap: 5px;
+    width: 90%;
+    height: 100%;
     margin-top: 50px;
-
+    align-self: center;
+    padding: 10px;
 
     @media (min-width: ${breakpoints.tablet}) {
-        width: 55vw;
+        width: 50%;
     }
 `;
 
-export const ProjectItem = styled.div<{ alternate: boolean }>`
+export const ProjItem = styled.div<{ alternate: boolean }>`
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  // Ställer in vertikal layout för mobilversion
     background: ${colors.beige};
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    width: 100%;
-    max-height: 500px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
 
+    //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: 20px 0;
+    padding: 20px;
+    width: 100%;
+    
     @media (min-width: ${breakpoints.tablet}) {
-        flex-direction: ${(props) => (props.alternate ? "row-reverse" : "row")};
-        height: 200px;
+        flex-direction: ${(props) => (props.alternate ? "row-reverse" : "row")};  // Växla mellan vänster och höger bild
+        width: 90%;  // Sätt en bredd på varje card
+        align-self: center;
     }
 `;
 
@@ -42,7 +54,7 @@ export const ImageContainer = styled.div`
     flex: 1;
     padding: 8px; 
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -52,9 +64,10 @@ export const ImageContainer = styled.div`
 
 export const ProjectImage = styled.img`
     width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    border-radius: 8px; 
+    height: auto;
+    object-fit: cover;  // Gör så att bilden täcker hela containern utan att bli förvrängd
+    border-radius: 8px;
+    max-height: 200px;  // Sätt en maxhöjd på bilden för att hålla den hanterbar
 `;
 
 export const ProjectContent = styled.div`
@@ -62,16 +75,23 @@ export const ProjectContent = styled.div`
     padding: 16px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: first baseline;
+    justify-content: space-between;
+    text-align: center; 
+ 
 `;
 
 export const ProjectTitle = styled.h3`
     margin: 0 0 10px 0;
+    font-size: ${fontSizes.large};
+
+    @media (min-width: ${breakpoints.tablet}) {
+       text-align: left;
+    }
 `;
 
 export const ProjectDescription = styled.p`
     margin: 0 0 20px 0;
+    font-size: ${fontSizes.basic};
     text-align: left;
 `;
 
@@ -87,7 +107,6 @@ export const GitHubButton = styled.button`
     cursor: pointer;
     align-self: start;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
-
 
     &:hover {
         background: darkorange;
