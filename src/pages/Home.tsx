@@ -8,7 +8,9 @@ const HeroSection = styled.section`
   background-size: cover;
   width: 100vw;
   background-position: center;
-  height: 300px; 
+  height: 350px; 
+  padding: 20px;
+  margin: 10px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,16 +32,21 @@ const StyledContainer = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: 3rem;
-  margin: auto;
+  font-size: ${fontSizes.xxxLarge};
+  margin: 15px auto;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+
+  @media (min-width: ${breakpoints.tablet}) {
+    font-size: 3rem;
+  }
 `;
 
 const StyledImg = styled.img`
-  width: 100%;
+  width: 90%;
+  height: auto;
   border-radius: 16px;
   max-width: 200px;
-  margin: 25px;
+  margin: 25px 0 0 0;
 `;
 
 const StyledP = styled.p`
