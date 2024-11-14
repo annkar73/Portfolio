@@ -183,6 +183,12 @@ export const HomeImg = styled.img`
   border-radius: 16px;
   max-width: 200px;
   margin: 25px 0 0 0;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7);
+
+
+  @media (min-width: ${breakpoints.tablet}) {
+    margin:25px 0 0 15px;
+  }
 `;
 
 
