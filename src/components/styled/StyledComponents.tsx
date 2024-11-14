@@ -56,7 +56,7 @@ export const AboutWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 10px;
-  margin: 20px auto;
+  margin: 10px auto;
   box-sizing: border-box;
 
   @media (min-width: ${breakpoints.tablet}) {
