@@ -17,17 +17,11 @@ export const Contact = () => {
           <StyledBlock>
             <StrongP>Kontakta mig via e-post:</StrongP>
             <StyledLink href="mailto:karlsen1973@outlook.com">karlsen1973@outlook.com</StyledLink>
-            <StrongP>Se mer på</StrongP>
-            <ContactList>
-              <li>{" "}
-              <StyledLink href="https://www.linkedin.com/in/annakarlsen/">LinkedIn</StyledLink>
-
-              </li>
-              <li>{" "}
+            <StrongP>Se mer på{" "}
+              <StyledLink href="https://www.linkedin.com/in/annakarlsen/">LinkedIn</StyledLink> och {" "}
               <StyledLink href="https://github.com/annkar73">GitHub</StyledLink>
-
-              </li>
-            </ContactList>
+              </StrongP> 
+            
           </StyledBlock>
           </TextWrapper>
         </AboutWrapper>

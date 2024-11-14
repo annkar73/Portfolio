@@ -200,6 +200,7 @@ export const StyledList = styled.ul`
 export const ContactList = styled.ul`
   list-style-type: none;
   text-align: left;
+  text-indent: 5px;
 `;
 
 
