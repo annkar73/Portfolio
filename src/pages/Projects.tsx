@@ -88,6 +88,7 @@ const ProjectTitle = styled.h3`
 
 const ProjectDescription = styled.p`
     margin: 0 0 20px 0;
+    text-align: left;
 `;
 
 const GitHubButton = styled.button`
