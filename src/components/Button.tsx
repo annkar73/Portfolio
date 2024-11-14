@@ -11,6 +11,6 @@ export const Button = styled.button`
     cursor: pointer;
 
     &:hover {
-        background: darkorange;
+        background: ${colors.accentHover};
     }
 `;

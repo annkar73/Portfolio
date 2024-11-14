@@ -4,7 +4,8 @@ export const colors = {
     white: "#fffafa",
     beige: "#e5d4b6",
     lightgrey: '#f0f0f0',
-    accent: "#f44e1c"
+    accent: "#f44e1c",
+    accentHover: "#ff8c00"
 };
 
 export const breakpoints = {

@@ -10,11 +10,11 @@ type Project = {
 };
 
 const projects: Project[] = [
-    { name: "Tic-tac-toe", description: "Ett tre-i-rad för två personer", image: "assets/tictactoe.png", caption: "Tic-Tac-Toe", gitHubLink: "https://annkar73.github.io/tic-tac-toe/" },
-    { name: "Memory", description: "Ett memoryspel av enklare slag.", image: "assets/memory.png", caption: "Memory", gitHubLink: "https://annkar73.github.io/memory-game/" },
-    { name: "Kalender med klocka", description: "En enkel kalender med klocka", image: "assets/clock.png", caption: "Kalender med klocka", gitHubLink: "https://annkar73.github.io/calendar/" },
-    { name: "Lottogenerator", description: "En slumpgenerator för olika sifferspel, bland annat Lotto.", image: "assets/lotto.png", caption: "Lottogenerator", gitHubLink: "https://annkar73.github.io/lotto-generator/" },
-    { name: "Konversationstartare", description: "En slumpgenerator för olika samtalsämnen.", image: "assets/snackis.png", caption: "Konversationsstartare", gitHubLink: "https://annkar73.github.io/vue-conversation-starters/" },
+    { name: "Tic-tac-toe", description: "Ett tre-i-rad för två personer. Skrivet i Vue och TypeScript", image: "assets/tictactoe.png", caption: "Tic-Tac-Toe", gitHubLink: "https://annkar73.github.io/tic-tac-toe/" },
+    { name: "Memory", description: "Ett memoryspel av enklare slag. Skrivet i Vue och TypeScript", image: "assets/memory.png", caption: "Memory", gitHubLink: "https://annkar73.github.io/memory-game/" },
+    { name: "Kalender med klocka", description: "En enkel kalender med klocka. Skrivet i Vue", image: "assets/clock.png", caption: "Kalender med klocka. Skrivet i Vue, JavaScript och TypeScript", gitHubLink: "https://annkar73.github.io/calendar/" },
+    { name: "Lottogenerator", description: "En slumpgenerator för olika sifferspel, bland annat Lotto. Skrivet i Vue och TypeScript", image: "assets/lotto.png", caption: "Lottogenerator", gitHubLink: "https://annkar73.github.io/lotto-generator/" },
+    { name: "Konversationstartare", description: "En slumpgenerator för olika samtalsämnen. Skrivet i Vue och TypeScript", image: "assets/snackis.png", caption: "Konversationsstartare", gitHubLink: "https://annkar73.github.io/vue-conversation-starters/" },
 ];
 
 const PageWrapper = styled.section`
@@ -30,9 +30,11 @@ const ProjectList = styled.div`
     gap: 20px;
     align-items: center;
     width: 90vw;
+    margin-top: 50px;
+
 
     @media (min-width: ${breakpoints.tablet}) {
-        width: 65vw;
+        width: 55vw;
     }
 `;
 
@@ -41,20 +43,20 @@ const ProjectItem = styled.div<{ alternate: boolean }>`
     flex-direction: column;
     background: ${colors.lightgrey};
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     width: 100%;
     max-height: 500px;
 
     @media (min-width: ${breakpoints.tablet}) {
         flex-direction: ${(props) => (props.alternate ? "row-reverse" : "row")};
-        height: 250px;
+        height: 200px;
     }
 `;
 
 const ImageContainer = styled.div`
     flex: 1;
-    padding: 8px; // Ger padding runt bilden
+    padding: 8px; 
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -67,8 +69,8 @@ const ImageContainer = styled.div`
 const ProjectImage = styled.img`
     width: 100%;
     height: 100%;
-    object-fit: cover; // Bilden blir beskuren för att passa in i containern
-    border-radius: 8px; // Rundade hörn
+    object-fit: cover; 
+    border-radius: 8px; 
 `;
 
 const ProjectContent = styled.div`
@@ -77,6 +79,7 @@ const ProjectContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: first baseline;
 `;
 
 const ProjectTitle = styled.h3`

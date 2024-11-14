@@ -26,43 +26,42 @@ const Nav = styled.nav`
 
   /* Mobile-first: Initially hidden on mobile */
   flex-direction: column;
-  display: none; /* Initially hidden on mobile */
+  display: none;
 
-  /* Mobile - when menu is open */
   &.menu-open {
     display: flex;
     position: absolute;
-    top: 50px; /* Position menu below header */
+    top: 50px;
     left: 0;
     right: 0;
     background-color: ${colors.dark};
     padding: 20px;
-    z-index: 999; /* Ensure menu is above content */
-    height: auto; /* Ensure menu expands to fit content */
-    max-height: 100vh; /* Limit the height to viewport */
-    overflow-y: auto; /* Scroll if links overflow */
+    z-index: 999;
+    height: auto;
+    max-height: 100vh;
+    overflow-y: auto;
   }
 
   @media (min-width: ${breakpoints.tablet}) {
-    flex-direction: row; /* Horizontal layout for tablet and desktop */
-    display: flex; /* Always visible on tablet and desktop */
-    position: static; /* Reset position for tablet and desktop */
+    flex-direction: row;
+    display: flex;
+    position: static;
     height: auto;
     overflow: visible;
   }
 
   @media (min-width: ${breakpoints.desktop}) {
-    gap: 30px; /* Larger gap between links on desktop */
+    gap: 30px;
   }
 `;
 
 const StyledNavLink = styled(NavLink)`
   color: ${colors.white};
   text-decoration: none;
-  padding: 10px 20px; /* Add some padding for better spacing */
+  padding: 10px 20px;
 
-  :hover {
-    text-decoration: underline;
+  &:hover {
+    color: ${colors.accentHover};
   }
 
   &.active {
@@ -70,7 +69,7 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 
-const Hamburger = styled.button`
+const Hamburger = styled.button<{ isMenuOpen: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -83,21 +82,35 @@ const Hamburger = styled.button`
   position: absolute;
   top: 50%;
   right: 20px;
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
+  z-index: 1001;
 
   div {
     width: 25px;
     height: 3px;
     background-color: ${colors.white};
     border-radius: 10px;
+    transition: transform 0.3s, opacity 0.3s;
   }
 
-  /* Show hamburger only for mobile */
+  /* Placera linjerna med mellanrum när menyn är stängd */
+  div:nth-child(1) {
+    transform: ${({ isMenuOpen }) => (isMenuOpen ? 'rotate(45deg) translate(5px, 11px)' : 'none')};
+  }
+
+  div:nth-child(2) {
+    opacity: ${({ isMenuOpen }) => (isMenuOpen ? '0' : '1')};
+    margin: 4px 0; /* Skapa mer utrymme mellan linjerna */
+  }
+
+  div:nth-child(3) {
+    transform: ${({ isMenuOpen }) => (isMenuOpen ? 'rotate(-45deg) translate(5px, -11px)' : 'none')};
+  }
+
   @media (min-width: ${breakpoints.tablet}) {
     display: none;
   }
 `;
-
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -105,11 +118,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div>
       <Header>
         {/* Hamburger menu */}
-        <Hamburger onClick={toggleMenu}>
+        <Hamburger onClick={toggleMenu} isMenuOpen={isMenuOpen}>
           <div></div>
           <div></div>
           <div></div>
@@ -117,10 +134,18 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
         {/* Navigation */}
         <Nav className={isMenuOpen ? 'menu-open' : ''}>
-          <StyledNavLink to="/">Hem</StyledNavLink>
-          <StyledNavLink to="/projects">Projekt</StyledNavLink>
-          <StyledNavLink to="/about">Om mig</StyledNavLink>
-          <StyledNavLink to="/contact">Kontakt</StyledNavLink>
+          <StyledNavLink to="/" onClick={closeMenu}>
+            Hem
+          </StyledNavLink>
+          <StyledNavLink to="/projects" onClick={closeMenu}>
+            Projekt
+          </StyledNavLink>
+          <StyledNavLink to="/about" onClick={closeMenu}>
+            Om mig
+          </StyledNavLink>
+          <StyledNavLink to="/contact" onClick={closeMenu}>
+            Kontakt
+          </StyledNavLink>
         </Nav>
       </Header>
 
