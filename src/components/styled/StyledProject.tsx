@@ -2,13 +2,12 @@ import { styled } from "styled-components";
 import { breakpoints, colors, fontSizes } from "../../helpers/variables";
 
 // Wrapper för hela sidan
-export const PageWrapper = styled.section`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-    background-color: transparent;
+export const StyledH1 = styled.h1`
+  color: ${colors.dark};
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-size: ${fontSizes.xxxLarge};
 `;
 
 // Container för projektlistan

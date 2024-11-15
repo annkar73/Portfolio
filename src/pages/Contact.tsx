@@ -9,7 +9,7 @@ const ContactWrapper = styled.div`
   background-color: rgb(255, 255, 255, 0.1);
   box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7);
   border-radius: 16px;
-  width: 90vw;
+  width: 90%;
   height: auto;
   align-self: center;
   align-items: center;
@@ -48,7 +48,6 @@ export const Contact = () => {
   return (
     <>
       <PageWrapper>
-      <StyledH1>Kontakt</StyledH1>
 
         <ContactWrapper>
           <ContactTextWrapper>

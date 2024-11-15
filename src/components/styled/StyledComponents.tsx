@@ -37,7 +37,7 @@ export const HeroTextContainer = styled.div`
 export const PageWrapper = styled.section`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 25px;
     background-color: transparent;
     width: 100vw;
