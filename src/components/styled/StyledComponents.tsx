@@ -71,9 +71,9 @@ export const ContactWrapper = styled.div`
   background-color: rgb(255, 255, 255, 0.1);
   box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7);
   border-radius: 16px;
-  width: 100%;
+  width: 80%;
   height: auto;
-  //align-self: center;
+  align-self: center;
   align-items: center;
   justify-content: center;
   padding: 10px;
@@ -136,6 +136,7 @@ export const StyledBlock = styled.div`
   font-size: ${fontSizes.basic};
   margin: 10px;
   line-height: 1.5;
+  text-align: left;
 `;
 
 
@@ -245,4 +246,5 @@ export const StyledLink = styled.a`
   font-size: ${fontSizes.large};
   margin: 0;
   padding: 0;
+  text-align: left;
 `;
