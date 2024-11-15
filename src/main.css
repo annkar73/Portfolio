@@ -1,20 +1,30 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%; /* Se till att båda täcker hela sidan */
+  margin: 0;
+}
+
+/* Gradient på html */
+html {
+  background: linear-gradient(to bottom, #ffe998, #57370d); /* Jämn gradient */
+  background-size: cover; /* Täcker hela höjden och bredden */
+  background-repeat: no-repeat; /* Förhindra upprepning */
+  background-attachment: fixed; /* Gradienten rör sig inte vid scroll */
+}
+
+/* Body-stilar */
 body {
-  font-family: "Verdana", sans-serif;
-  background: linear-gradient(to bottom, #ffe998, #57370d);
-  background-size: cover; /* Ser till att bakgrunden täcker hela fönstret */
-  background-attachment: fixed; /* Håller bakgrunden på plats när användaren scrollar */
-  background-position: center; /* Centrera bakgrunden */
-  min-height: 100vh; /* Täcker hela höjden av skärmen */
-  margin: 0; /* Ta bort standardmarginaler för body */
   display: flex;
-  height: 100%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  min-height: 100vh; /* För sidor med lite innehåll */
+  width: 100%;
+  background: none; /* Ingen extra bakgrund behövs */
 }

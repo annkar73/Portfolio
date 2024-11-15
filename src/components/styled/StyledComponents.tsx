@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { breakpoints, fontSizes, colors } from "../../helpers/variables";
 
+
 // HeroImage
 export const HeroSection = styled.section`
   background-image: url('/assets/mosaic.jpg'); 
@@ -9,7 +10,7 @@ export const HeroSection = styled.section`
   background-position: center;
   height: 350px; 
   padding: 20px;
-  margin: 10px 0;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,8 +43,6 @@ export const PageWrapper = styled.section`
     width: 100vw;
 `;
 
-
-
 export const AboutWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -56,7 +55,7 @@ export const AboutWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 10px;
-  margin: 10px auto;
+  margin: 0;
   box-sizing: border-box;
 
   @media (min-width: ${breakpoints.tablet}) {
@@ -65,12 +64,29 @@ export const AboutWrapper = styled.div`
   }
 `;
 
+
+export const ContactWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255, 0.1);
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+  //align-self: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+`;
+
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${colors.beige};
   border-radius: 16px;
-  margin: 10px;
+  margin: 0;
   width: 100%;
   height: auto;
   justify-content: center;
@@ -82,8 +98,16 @@ export const TextWrapper = styled.div`
  
 
   @media (min-width: ${breakpoints.tablet}) {
-    width: 100%;
+    width: 50%;
     align-self: center;
+  }
+`;
+
+export const SlimWrapper = styled(TextWrapper)`
+  
+
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 40%;
   }
 `;
 

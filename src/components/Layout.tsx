@@ -15,16 +15,13 @@ const Header = styled.header`
   height: 50px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
-  z-index: 1000; /* Ensure header stays above other content */
+  z-index: 1000;
 `;
 
 const Nav = styled.nav`
   display: flex;
   justify-content: center;
   gap: 20px;
-
-  /* Mobile-first: Initially hidden on mobile */
   flex-direction: column;
   display: none;
 
@@ -93,14 +90,13 @@ const Hamburger = styled.button<{ isMenuOpen: boolean }>`
     transition: transform 0.3s, opacity 0.3s;
   }
 
-  /* Placera linjerna med mellanrum när menyn är stängd */
   div:nth-child(1) {
     transform: ${({ isMenuOpen }) => (isMenuOpen ? 'rotate(45deg) translate(5px, 11px)' : 'none')};
   }
 
   div:nth-child(2) {
     opacity: ${({ isMenuOpen }) => (isMenuOpen ? '0' : '1')};
-    margin: 4px 0; /* Skapa mer utrymme mellan linjerna */
+    margin: 4px 0;
   }
 
   div:nth-child(3) {
@@ -111,6 +107,29 @@ const Hamburger = styled.button<{ isMenuOpen: boolean }>`
     display: none;
   }
 `;
+
+const Footer = styled.footer`
+  background-color: ${colors.dark};
+  color: ${colors.white};
+  text-align: left;
+  padding: 15px 20px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+`;
+const LayoutContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const MainContent = styled.main`
+  flex: 1;
+  margin-top: 50px;
+`;
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -123,16 +142,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <div>
+    <LayoutContainer>
       <Header>
-        {/* Hamburger menu */}
         <Hamburger onClick={toggleMenu} isMenuOpen={isMenuOpen}>
           <div></div>
           <div></div>
           <div></div>
         </Hamburger>
-
-        {/* Navigation */}
         <Nav className={isMenuOpen ? 'menu-open' : ''}>
           <StyledNavLink to="/" onClick={closeMenu}>
             Hem
@@ -149,8 +165,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         </Nav>
       </Header>
 
-      <main>{children}</main>
-    </div>
+      <MainContent>{children}</MainContent>
+
+      <Footer>
+        © {new Date().getFullYear()} Anna Karlsen - Alla rättigheter förbehållna
+      </Footer>
+    </LayoutContainer>
   );
 };
 
