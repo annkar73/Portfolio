@@ -19,6 +19,10 @@ const ContactWrapper = styled.div`
   box-sizing: border-box;
 
   @media (min-width: ${breakpoints.tablet}) {
+    width: 80%;
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
     width: 55%;
   }
 `;
